@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+:root {
+    --text-color: #06204e;
+    --background-color: #dfebff;
+    --background-color-2: #ffffff;
+    --a-color: #2a064e;
+    --p-collor: #06204e;
+    --h2-color: #06204e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    color: #06204e;
+}
+
+p {
+    margin: 10px;
+    padding: 0;
+    color: #06204e;
+}
+
+.text {
+    margin: 80px 200px 80px 200px;
+    padding: 20px 20px 20px 20px;
+    background-color: #dfebff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+}
+
+header {
+    margin: auto;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    width: max-content;
+    max-width: calc(100% - 32px);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 1px solid #2a064e;
+}
+
+header a {
+    color: #2a064e;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+header a.ativo {
+    background-color: #2a064e;
+    color: #dfebff;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: #dfebff;
+    color: #06204e;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

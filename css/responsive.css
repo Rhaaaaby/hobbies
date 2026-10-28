@@ -1,0 +1,134 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 320px;
+    background-color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+.content {
+    width: 100%;
+    padding: 1px 0 32px;
+}
+
+header {
+    width: fit-content;
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.text {
+    width: min(1000px, calc(100% - 64px));
+    margin: clamp(32px, 6vw, 80px) auto;
+    padding: clamp(20px, 3vw, 32px);
+}
+
+.text h2 {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    line-height: 1.25;
+}
+
+.text p {
+    margin: 12px 0 0;
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    line-height: 1.7;
+}
+
+.wordmark h1 {
+    font-size: clamp(3.5rem, 14vw, 8rem);
+    letter-spacing: clamp(.08em, 2.5vw, .27em);
+}
+
+.wordmark p {
+    font-size: clamp(.75rem, 2vw, 1.25rem);
+    letter-spacing: clamp(.1em, 1.5vw, .28em);
+}
+
+@media (max-width: 900px) {
+    .text {
+        width: min(760px, calc(100% - 48px));
+    }
+
+    .stage {
+        width: min(92vw, 520px);
+    }
+
+    .symbol {
+        width: min(68vw, 380px);
+        height: min(68svh, 520px);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        position: sticky;
+        top: 8px;
+        z-index: 5;
+        width: calc(100% - 24px);
+        max-width: none;
+        gap: 4px;
+        padding: 6px;
+        font-size: clamp(.65rem, 2.8vw, .8rem);
+    }
+
+    header a {
+        flex: 1 1 auto;
+        padding: 10px 6px;
+    }
+
+    .text {
+        width: calc(100% - 32px);
+        margin: 28px auto;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .text p {
+        margin-top: 10px;
+        line-height: 1.65;
+    }
+
+    .stage {
+        width: 94vw;
+        min-height: 90svh;
+        padding: 1rem 0 2rem;
+    }
+
+    .symbol {
+        width: min(78vw, 340px);
+        height: min(62svh, 460px);
+    }
+
+    .wordmark {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        gap: 2px;
+        padding: 4px;
+    }
+
+    header a {
+        padding: 9px 3px;
+        font-size: .62rem;
+    }
+
+    .text {
+        width: calc(100% - 24px);
+        padding: 16px;
+    }
+}
