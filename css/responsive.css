@@ -56,6 +56,30 @@ header {
     letter-spacing: clamp(.1em, 1.5vw, .28em);
 }
 
+.mobile-menu {
+    display: contents;
+}
+
+.key-button {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+}
+
+.key-button img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.key-button.active img {
+    transform: rotate(-90deg);
+}
+
 @media (max-width: 900px) {
     .text {
         width: min(760px, calc(100% - 48px));
@@ -75,17 +99,67 @@ header {
     header {
         position: sticky;
         top: 8px;
-        z-index: 5;
+        z-index: 10;
+        width: fit-content;
+        max-width: calc(100% - 24px);
+        gap: 0;
+        padding: 0;
+        transform: none;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        flex-wrap: nowrap;
+        transition: top .5s ease, left .5s ease, transform .5s ease,
+            width .5s ease, background-color .3s ease, box-shadow .3s ease;
+    }
+
+    header.menu-open {
+        top: 8px;
         width: calc(100% - 24px);
         max-width: none;
         gap: 4px;
-        padding: 6px;
-        font-size: clamp(.65rem, 2.8vw, .8rem);
+        padding: 4px;
+        transform: none;
+        background: #fff;
+        border: 1px solid #2a064e;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+
+    .key-button {
+        display: block;
+        flex: 0 0 auto;
+        padding: 10px;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex: 1 1 0;
+        min-width: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4px;
+        padding: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: transparent;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-menu.active {
+        display: flex;
     }
 
     header a {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         padding: 10px 6px;
+        font-size: clamp(.65rem, 2.8vw, .8rem);
     }
 
     .text {

@@ -19,7 +19,7 @@ body {
 }
 
 h2 {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     color: #06204e;
 }
@@ -37,6 +37,45 @@ p {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion details {
+    border: 1px solid #ddd;
+    margin: 10px;
+    overflow: hidden;
+
+    background-color: var(--background-color-2);
+    border-radius: 10px;
+}
+
+.accordion summary {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+
+    border-radius: 10px;
+}
+
+.accordion summary::after {
+    content: "+";
+    float: right;
+}
+
+.accordion details[open] summary::after {
+    content: "−";
+}
+
+.accordion details p {
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.6;
+
+    background-color: var(--background-color-2);
 }
 
 header {
